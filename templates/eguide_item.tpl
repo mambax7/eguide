@@ -9,7 +9,7 @@
         <div style="float:right;">
             <a href="index.php?cat=<{$event.catid}>">
                 <{if $event.catimg}>
-                    <img src="<{$event.catimg}>" alt="<{$event.catname}>" class="catbox img-thumbnail" width="150"/>
+                    <img src="<{$event.catimg}>" alt="<{$event.catname}>" class="catbox img-thumbnail" width="150">
                 <{else}>
                     <span class="catbox"><{$event.catname}></span>
                 <{/if}>

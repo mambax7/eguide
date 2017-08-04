@@ -4,13 +4,13 @@
         <form action="event.php">
             <{securityToken}><{*//mb*}>
             <b><{$smarty.const._MD_EXTENT_DATE}></b>
-            <input type="hidden" name="eid" value="<{$event.eid}>"/>
+            <input type="hidden" name="eid" value="<{$event.eid}>">
             <select name="sub" class="form-control">
                 <{foreach from=$event.extents item=ext}>
                     <option value="<{$ext.exid}>"><{$ext.date}></option>
                 <{/foreach}>
             </select>
-            <input type="submit" value="<{$smarty.const._SUBMIT}>" class="btn btn-default"/>
+            <input type="submit" value="<{$smarty.const._SUBMIT}>" class="btn btn-default">
         </form>
     </div>
 <{elseif $message}>
@@ -31,12 +31,12 @@
                     <tr class="evms <{cycle values="even,odd"}>">
                         <td class="head"><{$smarty.const._MD_EMAIL}><{$smarty.const._MD_REQUIRE_MARK}></td>
                         <td><input type='text' size="40" name="email" id="email" value="<{$form.email}>"
-                                   class="form-control"/>
+                                   class="form-control">
                             <{if $form.user_notify}>
                                 <br>
                                 <label class="checkbox-inline"><input type="checkbox"
                                                                       <{if $smarty.post.notify}>checked="checked"
-                                                                      <{/if}>name="notify"/><{$smarty.const._MD_NOTIFY_REQUEST}>
+                                                                      <{/if}>name="notify"><{$smarty.const._MD_NOTIFY_REQUEST}>
                                 </label>
                             <{/if}>
                         </td>
@@ -45,7 +45,7 @@
                         <tr class="evms <{cycle values="even,odd"}>">
                             <td class="head"><{$smarty.const._MD_EMAIL_CONF}><{$smarty.const._MD_REQUIRE_MARK}></td>
                             <td><input type="text" size="40" name="email_conf" id="email_conf"
-                                       value="<{$form.email_conf}>" class="form-control"/>
+                                       value="<{$form.email_conf}>" class="form-control">
                                 <div class="note"><{$smarty.const._MD_EMAIL_CONF_DESC}></div>
                             </td>
                         </tr>
@@ -74,15 +74,15 @@
                     <{/if}>
                 <{/foreach}>
             </table>
-            <input type="hidden" name="eid" value="<{$form.eid}>"/>
+            <input type="hidden" name="eid" value="<{$form.eid}>">
             <{if $event.exid}>
-                <input type="hidden" name="sub" value="<{$event.exid}>"/>
+                <input type="hidden" name="sub" value="<{$event.exid}>">
             <{/if}>
             <p style="text-align: center;">
 
                 <input type="submit"
                        value="<{if $form.op=="confirm"}><{$smarty.const._MD_ORDER_CONF}><{else}><{$smarty.const._MD_ORDER_SEND}><{/if}>" <{$form.submit_opts}>
-                       class="btn btn-primary"/>
+                       class="btn btn-primary">
 
             </p>
         </form>
@@ -99,6 +99,7 @@
                 }
                 return false;
             }
+
             function xoopsFormValidate_order() {
                 myform = window.document.order;
                 obj = null;
@@ -107,14 +108,14 @@
                 myobj = myform["<{$name}>"];
                 if (checkItem(myobj)) {
                     msg = msg + "<{$msg}>\n";
-                    if (obj == null)obj = myobj;
+                    if (obj == null) obj = myobj;
                 }
                 <{/foreach}>
                 <{if $form.options.email_repeat_check}>
                 myobj = myform["email_conf"];
                 if (myform["email"].value != myobj.value) {
                     msg = msg + "<{$smarty.const._MD_MAIL_CONF_ERR}>\n";
-                    if (obj == null)obj = myobj;
+                    if (obj == null) obj = myobj;
                 }
                 <{/if}>
                 if (msg != "") {
@@ -124,6 +125,7 @@
                 }
                 return true;
             }
+
             //--></script>
         <{if $form.lang_note || $form.note}>
             <p align="right"><span class="label label-danger"><{$form.lang_note}> <{$form.note}></span></p>

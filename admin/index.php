@@ -255,7 +255,7 @@ switch ($op) {
         echo "<select name='uid'>\n";
         while ($p = $xoopsDB->fetchArray($result)) {
             $ck = ($uid == $p['uid']) ? ' selected' : '';
-            printf("<option value='%d'$ck>%s</>\n", $p['uid'], $p['uname']);
+            printf("<option value='%d'$ck>%s<>\n", $p['uid'], $p['uname']);
         }
         echo "</select></td></tr>\n";
         echo "<tr><td class='head'>" . _AM_POSTED . "</td><td class='odd'>$post</td></tr>\n";
@@ -414,7 +414,7 @@ function show_categories()
         if ($haschild) {
             $del = '-';
         } else {
-            $del = "<input type='checkbox' name='dels[$id] value='$id'/>";
+            $del = "<input type='checkbox' name='dels[$id] value='$id'>";
             ++$ndel;
         }
         echo '<tr class="' . ($n++ % 2 ? 'even' : 'odd') . "\"><td align='center'>$del</td>";
@@ -424,7 +424,7 @@ function show_categories()
         echo "</tr>\n";
     }
     if ($ndel) {
-        echo "<tr><td colspan=\"7\" class=\"foot\"><input type='submit' value='" . _DELETE . "'/></td></tr>";
+        echo "<tr><td colspan=\"7\" class=\"foot\"><input type='submit' value='" . _DELETE . "'></td></tr>";
     }
     echo "</table></form>\n";
 }

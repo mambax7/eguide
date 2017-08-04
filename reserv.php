@@ -337,12 +337,12 @@ VALUES ($eid,$exid,$uid,$now,$ml, " . $xoopsDB->quoteString($value) . ",$accept,
         if (isset($_POST['email'])) {
             $email  = $myts->htmlSpecialChars($_POST['email']);
             $vals   = array_merge(array(_MD_EMAIL => $email), $vals);
-            $emhide = "<input type='hidden' name='email' value='$email'/>\n";
+            $emhide = "<input type='hidden' name='email' value='$email'>\n";
             if (isset($_POST['email_conf'])) {
-                $emhide .= "<input type='hidden' name='email_conf' value='" . $myts->htmlSpecialChars($_POST['email_conf']) . "'/>\n";
+                $emhide .= "<input type='hidden' name='email_conf' value='" . $myts->htmlSpecialChars($_POST['email_conf']) . "'>\n";
             }
             if (!empty($_POST['notify'])) {
-                $emhide .= "<input type='hidden' name='notify' value='" . $myts->htmlSpecialChars($_POST['notify']) . "'/>\n";
+                $emhide .= "<input type='hidden' name='notify' value='" . $myts->htmlSpecialChars($_POST['notify']) . "'>\n";
             }
         }
 
@@ -358,13 +358,13 @@ VALUES ($eid,$exid,$uid,$now,$ml, " . $xoopsDB->quoteString($value) . ",$accept,
         if (!$errs) {
             $n = 0;
             $xoopsTpl->assign('submit', "<form action='reserv.php?op=order' method='post'>"
-                                        . "<input type='hidden' name='eid' value='$eid'/>\n"
+                                        . "<input type='hidden' name='eid' value='$eid'>\n"
                                         . $emhide
                                         . implode("\n", get_opt_values($opts, $errs, true))
                                         . "\n<input type='submit' value='"
                                         . _MD_ORDER_SEND
                                         . "' class='btn btn-primary'>\n"
-                                        . ($exid ? "<input type='hidden' name='sub' value='$exid'/>\n" : '')
+                                        . ($exid ? "<input type='hidden' name='sub' value='$exid'>\n" : '')
                                         . '</form>');
         }
         $xoopsTpl->assign('cancel',

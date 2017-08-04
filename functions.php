@@ -310,9 +310,9 @@ function eventform($data, $uid)
                         if ($type === 'radio') {
                             ++$sub;
                             if (isset($args[1])) {
-                                $opts .= "<label><input type='$type' name='$fname' value='$an'$ck $prop/>" . $args[1] . '</label> ';
+                                $opts .= "<label><input type='$type' name='$fname' value='$an'$ck $prop>" . $args[1] . '</label> ';
                             } else {
-                                $opts .= "<label><input type='$type' name='$fname' value='$an'$ck $prop/>$an</label> &nbsp; ";
+                                $opts .= "<label><input type='$type' name='$fname' value='$an'$ck $prop>$an</label> &nbsp; ";
                             }
                         } elseif (in_array($type, array('text', 'textarea', 'const'))) {
                             if (!isset($_POST[$fname])) {
@@ -323,7 +323,7 @@ function eventform($data, $uid)
                                 $ck = in_array($an, $_POST[$fname]) ? ' checked' : '';
                             }
                             $lab  = empty($args[1]) ? "$an &nbsp; " : $args[1] . ' ';
-                            $opts .= "<label><input type='$type' name='${fname}[]' id='${fname}[]' value='$an'$ck $prop/>" . $lab . '</label>';
+                            $opts .= "<label><input type='$type' name='${fname}[]' id='${fname}[]' value='$an'$ck $prop>" . $lab . '</label>';
                         } elseif ($type === 'select') {
                             if ($ck != '') {
                                 $ck = ' selected';
@@ -342,7 +342,7 @@ function eventform($data, $uid)
                 $v = htmlspecialchars($v);
             }
             if ($type === 'text') {
-                $opts .= "<input size='$size' name='$fname' value=\"$v\" $prop/>";
+                $opts .= "<input size='$size' name='$fname' value=\"$v\" $prop>";
             } elseif ($type === 'textarea') {
                 $opts .= "<textarea name='$fname' rows='$rows' cols='$cols' wrap='virtual' $prop>$v</textarea>";
             } elseif ($type === 'select') {

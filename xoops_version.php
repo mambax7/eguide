@@ -54,59 +54,59 @@ $modversion['adminmenu']   = 'admin/menu.php';
 
 // Templates
 $modversion['templates'][] = array(
-    'file'        => $myprefix . '_item.html',
+    'file'        => $myprefix . '_item.tpl',
     'description' => _MI_EGUIDE_EVENT_ITEM_TPL
 );
 $modversion['templates'][] = array(
-    'file'        => $myprefix . '_index.html',
+    'file'        => $myprefix . '_index.tpl',
     'description' => _MI_EGUIDE_INDEX_TPL
 );
 $modversion['templates'][] = array(
-    'file'        => $myprefix . '_event.html',
+    'file'        => $myprefix . '_event.tpl',
     'description' => _MI_EGUIDE_EVENT_TPL
 );
 $modversion['templates'][] = array(
-    'file'        => $myprefix . '_entry.html',
+    'file'        => $myprefix . '_entry.tpl',
     'description' => _MI_EGUIDE_ENTRY_TPL
 );
 $modversion['templates'][] = array(
-    'file'        => $myprefix . '_userssel.html',
+    'file'        => $myprefix . '_userssel.tpl',
     'description' => _MI_EGUIDE_USERSSEL_TPL
 );
 $modversion['templates'][] = array(
-    'file'        => $myprefix . '_receipt.html',
+    'file'        => $myprefix . '_receipt.tpl',
     'description' => _MI_EGUIDE_RECEIPT_TPL
 );
 $modversion['templates'][] = array(
-    'file'        => $myprefix . '_admin.html',
+    'file'        => $myprefix . '_admin.tpl',
     'description' => _MI_EGUIDE_ADMIN_TPL
 );
 $modversion['templates'][] = array(
-    'file'        => $myprefix . '_receipt_print.html',
+    'file'        => $myprefix . '_receipt_print.tpl',
     'description' => _MI_EGUIDE_RECEIPT_PRINT_TPL
 );
 $modversion['templates'][] = array(
-    'file'        => $myprefix . '_event_print.html',
+    'file'        => $myprefix . '_event_print.tpl',
     'description' => _MI_EGUIDE_EVENT_PRINT_TPL
 );
 $modversion['templates'][] = array(
-    'file'        => $myprefix . '_confirm.html',
+    'file'        => $myprefix . '_confirm.tpl',
     'description' => _MI_EGUIDE_EVENT_CONF_TPL
 );
 $modversion['templates'][] = array(
-    'file'        => $myprefix . '_mylist.html',
+    'file'        => $myprefix . '_mylist.tpl',
     'description' => _MI_EGUIDE_EVENT_LIST_TPL
 );
 $modversion['templates'][] = array(
-    'file'        => $myprefix . '_confirm.html',
+    'file'        => $myprefix . '_confirm.tpl',
     'description' => _MI_EGUIDE_EVENT_CONFIRM_TPL
 );
 $modversion['templates'][] = array(
-    'file'        => $myprefix . '_editdate.html',
+    'file'        => $myprefix . '_editdate.tpl',
     'description' => _MI_EGUIDE_EDITDATE_TPL
 );
 $modversion['templates'][] = array(
-    'file'        => $myprefix . '_collect.html',
+    'file'        => $myprefix . '_collect.tpl',
     'description' => _MI_EGUIDE_COLLECT_TPL
 );
 $modversion['templates'][] = array(
@@ -122,7 +122,7 @@ $modversion['blocks'][1] = array(
     'edit_func'   => 'b_event_top_edit',
     'options'     => '0|10|40|0|',
     'can_clone'   => true,
-    'template'    => $myprefix . '_block_top.html'
+    'template'    => $myprefix . '_block_top.tpl'
 );
 
 $modversion['blocks'][] = array(
@@ -133,7 +133,7 @@ $modversion['blocks'][] = array(
     'edit_func'   => 'b_event_top_edit',
     'options'     => '0|10|40|1|',
     'can_clone'   => true,
-    'template'    => $myprefix . '_block_post.html'
+    'template'    => $myprefix . '_block_post.tpl'
 );
 $modversion['blocks'][] = array(
     'file'        => 'ev_top.php',
@@ -143,7 +143,7 @@ $modversion['blocks'][] = array(
     'edit_func'   => 'b_event_top_edit',
     'options'     => '0|10|40|2|',
     'can_clone'   => true,
-    'template'    => $myprefix . '_block_post.html'
+    'template'    => $myprefix . '_block_post.tpl'
 );
 $modversion['blocks'][] = array(
     'file'        => 'ev_cat.php',
@@ -153,7 +153,7 @@ $modversion['blocks'][] = array(
     'edit_func'   => 'b_event_select_edit',
     'options'     => '',
     'can_clone'   => true,
-    'template'    => $myprefix . '_block_category.html'
+    'template'    => $myprefix . '_block_category.tpl'
 );
 // Menu
 /** @var XoopsModuleHandler $moduleHandler */

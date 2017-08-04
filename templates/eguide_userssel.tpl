@@ -13,12 +13,12 @@
     <div id="users_search">
         <form action="entry.php" class="form-inline">
             <{securityToken}><{*//mb*}>
-            <input type="hidden" name="eid" value="<{$form.eid}>"/>
+            <input type="hidden" name="eid" value="<{$form.eid}>">
             <{if $event.exid}>
-                <input type="hidden" name="sub" value="<{$event.exid}>"/>
+                <input type="hidden" name="sub" value="<{$event.exid}>">
             <{/if}>
-            <input type="text" name="search" value="<{$smarty.get.search|escape}>" class="form-control"/> <input
-                    type="submit" value="<{$smarty.const._SEARCH}>" class="btn btn-default"/>
+            <input type="text" name="search" value="<{$smarty.get.search|escape}>" class="form-control"> <input
+                    type="submit" value="<{$smarty.const._SEARCH}>" class="btn btn-default">
         </form>
     </div>
     <table width="100%">

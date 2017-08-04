@@ -113,7 +113,7 @@ if ($eid) {            // already exists extents
     $result = $xoopsDB->query('SELECT rvid FROM ' . RVTBL . " WHERE eid=$eid AND exid=0", 1);
     if ($xoopsDB->getRowsNum($result) == 0) {
         $save         = _MD_EDIT_EXTENT . '(' . _MD_SAVE . ')';
-        $input_extent = "<input type='submit' name='editdate' value='$save'/>
+        $input_extent = "<input type='submit' name='editdate' value='$save'>
 &nbsp; <a href='editdate.php?eid=$eid'>" . _MD_EDIT_EXTENT . '</a>';
     }
     $result = $xoopsDB->query('SELECT * FROM ' . EXTBL . ' WHERE eidref=' . $eid . ' ORDER BY exdate');
@@ -128,7 +128,7 @@ if ($eid) {            // already exists extents
     $extents      = param('extents', 'none');
     $repeat       = param('repeat', 1);
     $input_extent = select_list('extents', $ev_extents, $extents);
-    $input_extent .= ' &nbsp; ' . _MD_EXTENT_REPEAT . " <input size='2' value='$repeat' name='repeat'/>";
+    $input_extent .= ' &nbsp; ' . _MD_EXTENT_REPEAT . " <input size='2' value='$repeat' name='repeat'>";
     $step         = 86400;        // sec/day
     switch ($extents) {
         case 'weekly':
@@ -494,7 +494,7 @@ function getDateField($p)
 
 function datefield($prefix, $time, $hastime = true)
 {
-    $buf = "<input id='${prefix}ymd' name='${prefix}ymd' size='12' value='" . formatTimestamp($time, 'Y-m-d') . "'/> ";
+    $buf = "<input id='${prefix}ymd' name='${prefix}ymd' size='12' value='" . formatTimestamp($time, 'Y-m-d') . "'> ";
     $buf .= "<script language='javascript'><!--
 document.write('<input type=\"button\" value=\"" . _MD_CAL . "\" onClick=\"showCalendar(\\'${prefix}ymd\\')\">');
 --></script>\n";

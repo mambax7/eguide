@@ -4,7 +4,7 @@
 <div class="event">
     <h2><{$lang_event_edit}></h2>
     <!-- for DHTML calendar -->
-    <link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/include/calendar-blue.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/include/calendar-blue.css">
     <script type="text/javascript" src="<{$xoops_url}>/include/calendar.js"></script>
     <script type="text/javascript">
         <!--
@@ -28,6 +28,7 @@
                 Calendar.stopEvent(ev);
             }
         }
+
         function showCalendar(id) {
             var el = xoopsGetElementById(id);
             if (calendar != null) {
@@ -48,8 +49,8 @@
         Calendar._DN = new Array
         <{if $weekname}>
         ("<{$weekname.Sun}>", "<{$weekname.Mon}>", "<{$weekname.Tue}>",
-                "<{$weekname.Wed}>", "<{$weekname.Thu}>", "<{$weekname.Fri}>",
-                "<{$weekname.Sat}>", "<{$weekname.Sun}>");
+            "<{$weekname.Wed}>", "<{$weekname.Thu}>", "<{$weekname.Fri}>",
+            "<{$weekname.Sat}>", "<{$weekname.Sun}>");
         <{else}>
         ("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun");
         <{/if}>
@@ -59,7 +60,7 @@
         (<{foreach from=$monthname item=month}>"<{$month}>", <{/foreach}>"");
         <{else}>
         ("Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
         <{/if}>
 
         Calendar._TT = {};
@@ -108,7 +109,7 @@
             <tr>
                 <td>
                     <h3><{$smarty.const._MD_TITLE}></h3>
-                    <input type="text" name="title" id="title" value="<{$title}>" size="60" maxlength="80"/>
+                    <input type="text" name="title" id="title" value="<{$title}>" size="60" maxlength="80">
                 </td><{if $input_category}>
                 <td>
                 <h3><{$smarty.const._MD_EVENT_CATEGORY}></h3>
@@ -132,9 +133,9 @@
             <legend>
                 <script type="text/javascript">
                     <{if $extent_sets || $edata.closetime!=3600 }>
-                    document.write('<input type="checkbox" onClick="toggle(\'exdate\',this);" checked="checked" id="dateck"/>');
+                    document.write('<input type="checkbox" onClick="toggle(\'exdate\',this);" checked="checked" id="dateck">');
                     <{else}>
-                    document.write('<input type="checkbox" onClick="toggle(\'exdate\',this);" id="dateck"/>');
+                    document.write('<input type="checkbox" onClick="toggle(\'exdate\',this);" id="dateck">');
                     <{/if}>
                 </script>
                 <{$smarty.const._MD_EDIT_EXTENT}>
@@ -142,7 +143,7 @@
             <div id="exdate">
                 <p><b><{$smarty.const._MD_EVENT_EXPIRE}></b> <{$input_expire}></p>
                 <p><b><{$smarty.const._MD_CLOSEBEFORE}></b> <input type="text" name="before" id="before" size="7"
-                                                                   value="<{$before}>"/> <span
+                                                                   value="<{$before}>"> <span
                             class="evinfo"><{$smarty.const._MD_CLOSEBEFORE_DESC}></span></p>
                 <{if $input_extent}>
                     <p>
@@ -152,7 +153,7 @@
                         <div class="extents">
                             <{foreach from=$extent_sets item=ext}>
                                 <nobr><{if $ext.disable}>&middot; <{else}><input type="checkbox" value="<{$ext.exdate}>"
-                                                                                 name="extent_sets[<{$ext.no}>]"<{if $ext.checked}> checked<{/if}>/><{/if}><{$ext.date}>
+                                                                                 name="extent_sets[<{$ext.no}>]"<{if $ext.checked}> checked<{/if}>><{/if}><{$ext.date}>
                                 </nobr>
                             <{/foreach}>
                         </div>
@@ -178,10 +179,11 @@
                     oFCKeditor.BasePath = "<{$xoops_url}>/common/fckeditor/";
                     oFCKeditor.ReplaceTextarea();
                 }
+
                 fckeditor_exec("summary", "100%", "350");
                 fckeditor_exec("body", "100%", "350");
             </script>
-            <input type="hidden" name="style" value="0"/>
+            <input type="hidden" name="style" value="0">
         <{else}>
             <h3><{$smarty.const._MD_EVENT_STYLE}></h3>
             <{$input_style}>
@@ -189,17 +191,17 @@
 
         <h3><{$smarty.const._MD_RESERV_SETTING}></h3>
         <div><input type="checkbox" name="reservation"
-                    value="1"<{if $reservation}> checked<{/if}>/> <{$smarty.const._MD_RESERV_DESC}></div>
+                    value="1"<{if $reservation}> checked<{/if}>> <{$smarty.const._MD_RESERV_DESC}></div>
         <div>
             <input type="checkbox" name="strict"
-                   value="1"<{if $strict}> checked<{/if}>/> <{$smarty.const._MD_RESERV_STOPFULL}>
+                   value="1"<{if $strict}> checked<{/if}>> <{$smarty.const._MD_RESERV_STOPFULL}>
             <input type="checkbox" name="autoaccept"
-                   value="1"<{if $autoaccept}> checked<{/if}>/> <{$smarty.const._MD_RESERV_AUTO}>
+                   value="1"<{if $autoaccept}> checked<{/if}>> <{$smarty.const._MD_RESERV_AUTO}>
         </div>
         <div><input type="checkbox" name="notify"
-                    value="1"<{if $notify}> checked<{/if}>/> <{$smarty.const._MD_RESERV_NOTIFYPOSTER}></div>
+                    value="1"<{if $notify}> checked<{/if}>> <{$smarty.const._MD_RESERV_NOTIFYPOSTER}></div>
         <div><b><{$smarty.const._MD_RESERV_PERSONS}></b> <input type="text" name="persons" value="<{$persons}>"
-                                                                size="3"/> <{$smarty.const._MD_RESERV_UNIT}></div>
+                                                                size="3"> <{$smarty.const._MD_RESERV_UNIT}></div>
         <h3><{$smarty.const._MD_RESERV_ITEM}></h3>
         <textarea name="optfield" wrap="virtual" cols="60" rows="5"><{$optfield}></textarea>
         <div id="itemhelper" style="display:none;">
@@ -214,7 +216,7 @@
                 <option value="hidden">hidden</option>
                 <option value="const">const</option>
             </select>
-            <input name="xeopt" size="30"/>
+            <input name="xeopt" size="30">
             <button onClick="return addFieldItem();"><{$smarty.const._MD_RESERV_ADD}></button>
         </div>
         <div class="evinfo">
@@ -223,16 +225,16 @@
             <legend>
                 <script type="text/javascript">
                     <{if $edata.optvars}>
-                    document.write('<input type="checkbox" onClick="toggle(\'optvars\',this);" checked="checked" id="optck"/>');
+                    document.write('<input type="checkbox" onClick="toggle(\'optvars\',this);" checked="checked" id="optck">');
                     <{else}>
-                    document.write('<input type="checkbox" onClick="toggle(\'optvars\',this);" id="optck"/>');
+                    document.write('<input type="checkbox" onClick="toggle(\'optvars\',this);" id="optck">');
                     <{/if}>
                 </script>
                 <{$smarty.const._MD_OPTION_VARS}>
             </legend>
             <div id="optvars">
                 <h3><{$smarty.const._MD_RESERV_REDIRECT}></h3>
-                <input type="text" name="redirect" value="<{$optvars.redirect|escape}>" size="60"/>
+                <input type="text" name="redirect" value="<{$optvars.redirect|escape}>" size="60">
                 <div class="evinfo"><{$smarty.const._MD_RESERV_REDIRECT_DESC}></div>
 
                 <h3><{$smarty.const._MD_OPTION_OTHERS}></h3>
@@ -246,8 +248,8 @@
             <{if $eid && $enable_copy}>
         <div><input type="checkbox" name="eid" value="0"><{$smarty.const._MD_NEWTITLE}></div>
         <{/if}>
-        <input type="submit" name="preview" value="<{$smarty.const._MD_PREVIEW}>"/>
-        <input type="submit" name="save" value="<{$smarty.const._MD_SAVE}>"/>
+        <input type="submit" name="preview" value="<{$smarty.const._MD_PREVIEW}>">
+        <input type="submit" name="save" value="<{$smarty.const._MD_SAVE}>">
         </p>
     </form>
     <script type="text/javascript">
@@ -255,6 +257,7 @@
 
         // display only JavaScript enable
         xoopsGetElementById("itemhelper").style.display = "block";
+
         function addFieldItem() {
             var myform = window.document.evform;
             var item = myform.xelab.value;
@@ -280,6 +283,7 @@
             myform.xeopt.value = "";
             return false; // always return false
         }
+
         function xoopsFormValidate_evform() {
             myform = window.document.evform;
             <{foreach from=$check key=name item=msg}>
@@ -296,6 +300,7 @@
         function toggle(id, a) {
             xoopsGetElementById(id).style.display = a.checked ? "block" : "none";
         }
+
         toggle("exdate", xoopsGetElementById("dateck"));
         toggle("optvars", xoopsGetElementById("optck"));
         //--></script>

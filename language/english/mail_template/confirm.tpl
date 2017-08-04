@@ -10,4 +10,4 @@ Ordering Data:
 Approved by {REQ_UNAME}
 
 If you want to cancel this order, please access following:
-  {CANCEL_URL}
+{CANCEL_URL}

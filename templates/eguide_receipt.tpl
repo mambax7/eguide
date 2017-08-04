@@ -11,7 +11,7 @@
             </td>
         </tr>
     </table>
-    <p/>
+    <p>
     <{if $extents}>
     <table class="outer table table-bordered table-striped">
         <tr class="head">
@@ -58,7 +58,7 @@
                 <tr class="<{cycle values="even, odd"}>">
                     <td>
                         <{if $order.confirm}>
-                            <input type="checkbox" name="act[]" value="<{$order.rvid}>" checked/>
+                            <input type="checkbox" name="act[]" value="<{$order.rvid}>" checked>
                         <{/if}>
                         <a href="receipt.php?rvid=<{$order.rvid}>" class="btn btn-info btn-xs"
                            role="button"><{$smarty.const._MD_DETAIL}></a>
@@ -86,9 +86,9 @@
                 <tr>
             </table>
             <{if $confirm}>
-                <input type='hidden' name='op' value='active'/>
-                <input type='hidden' name='eid' value='<{$eid}>'/>
-                <input type='hidden' name='sub' value='<{$exid}>'/>
+                <input type='hidden' name='op' value='active'>
+                <input type='hidden' name='eid' value='<{$eid}>'>
+                <input type='hidden' name='sub' value='<{$exid}>'>
                 <br>
                 <div class="form-inline form-group">
                     <select name='yesno' class="form-control">
@@ -96,7 +96,7 @@
                             <option value="<{$value}>"><{$label}></option>
                         <{/foreach}>
                     </select>
-                    <input type="submit" value="<{$smarty.const._SUBMIT}>" class="btn btn-default"/>
+                    <input type="submit" value="<{$smarty.const._SUBMIT}>" class="btn btn-default">
                 </div>
                 <div class="form-group">
                     <label><{$smarty.const._MD_RESERV_MSG_H}></label>

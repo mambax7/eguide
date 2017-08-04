@@ -31,7 +31,7 @@ xoops_cp_header();
 echo '<h2>Convert Format before eguide 2.30</h2>';
 echo '<div>' . _AM_COUNT . ": $count</div>";
 if ($count) {
-    echo "<form method='post'><input type='submit' name='convert'/></form>";
+    echo "<form method='post'><input type='submit' name='convert'></form>";
 }
 
 xoops_cp_footer();

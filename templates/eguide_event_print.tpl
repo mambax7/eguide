@@ -3,13 +3,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
 <head>
     <meta charset="<{$xoops_charset}>">
-    <meta name="generator" content="XOOPS"/>
+    <meta name="generator" content="XOOPS">
     <title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
-    <link rel="stylesheet" type="text/css" media="all" href="print.css"/>
-    <link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON"/>
+    <link rel="stylesheet" type="text/css" media="all" href="print.css">
+    <link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON">
 </head>
 <body>
-<div class="header"><img src="<{$xoops_url}>/images/logo.gif" alt="<{$xoops_sitename}>"/></div>
+<div class="header"><img src="<{$xoops_url}>/images/logo.gif" alt="<{$xoops_sitename}>"></div>
 <{include file="db:eguide_item.tpl"}>
 <{if $list}>
     <div class="evlist">

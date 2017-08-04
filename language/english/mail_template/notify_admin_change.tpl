@@ -11,6 +11,6 @@ Updated as followed:
 Update User: {DO_UNAME}
 
 -----------
-{X_SITENAME} ({X_SITEURL}) 
+{X_SITENAME} ({X_SITEURL})
 Webmaster
 {X_ADMINMAIL}

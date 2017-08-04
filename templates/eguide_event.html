@@ -3,13 +3,13 @@
 <div class="evform form-inline">
     <form action="event.php">
         <b><{$smarty.const._MD_EXTENT_DATE}></b>
-        <input type="hidden" name="eid" value="<{$event.eid}>"/>
+        <input type="hidden" name="eid" value="<{$event.eid}>">
         <select name="sub" class="form-control">
             <{foreach from=$event.extents item=ext}>
             <option value="<{$ext.exid}>"><{$ext.date}></option>
             <{/foreach}>
         </select>
-        <input type="submit" value="<{$smarty.const._SUBMIT}>" class="btn btn-default"/>
+        <input type="submit" value="<{$smarty.const._SUBMIT}>" class="btn btn-default">
     </form>
 </div>
 <{elseif $message}>
@@ -30,7 +30,7 @@
             <tr class="evms <{cycle values=" even,odd
             "}>">
             <td class="head"><{$smarty.const._MD_EMAIL}><{$smarty.const._MD_REQUIRE_MARK}></td>
-            <td><input type='text' size="40" name="email" id="email" value="<{$form.email}>" class="form-control"/>
+            <td><input type='text' size="40" name="email" id="email" value="<{$form.email}>" class="form-control">
                 <{if $form.user_notify}>
                 <br><label class="checkbox-inline"><input type="checkbox" <{if $smarty.post.notify}>checked="checked"
                     <{/if}>name="notify"><{$smarty.const._MD_NOTIFY_REQUEST}></label>
@@ -42,7 +42,7 @@
             "}>">
             <td class="head"><{$smarty.const._MD_EMAIL_CONF}><{$smarty.const._MD_REQUIRE_MARK}></td>
             <td><input type="text" size="40" name="email_conf" id="email_conf" value="<{$form.email_conf}>"
-                       class="form-control"/>
+                       class="form-control">
                 <div class="note"><{$smarty.const._MD_EMAIL_CONF_DESC}></div>
             </td>
             </tr>
@@ -74,9 +74,9 @@
             <{/if}>
             <{/foreach}>
         </table>
-        <input type="hidden" name="eid" value="<{$form.eid}>"/>
+        <input type="hidden" name="eid" value="<{$form.eid}>">
         <{if $event.exid}>
-        <input type="hidden" name="sub" value="<{$event.exid}>"/>
+        <input type="hidden" name="sub" value="<{$event.exid}>">
         <{/if}>
         <p style="text-align: center;">
 

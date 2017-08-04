@@ -26,7 +26,7 @@
                     <{if !$form.member_only}>
                         <tr class="<{cycle values="even,odd"}>">
                             <td class="head"><{$smarty.const._MD_EMAIL}></td>
-                            <td><input type="text" size="40" name="email" value="<{$form.email}>" class="form-control"/>
+                            <td><input type="text" size="40" name="email" value="<{$form.email}>" class="form-control">
                             </td>
                         </tr>
                     <{/if}>
@@ -38,14 +38,14 @@
                     <{/foreach}>
                 </table>
                 <{if $form.uid>0}>
-                    <input type="hidden" name="uid" id="reserv_uid" value="<{$form.uid}>"/>
+                    <input type="hidden" name="uid" id="reserv_uid" value="<{$form.uid}>">
                 <{/if}>
-                <input type="hidden" name="eid" value="<{$form.eid}>"/>
+                <input type="hidden" name="eid" value="<{$form.eid}>">
                 <{if $event.exid}>
-                    <input type="hidden" name="sub" value="<{$event.exid}>"/>
+                    <input type="hidden" name="sub" value="<{$event.exid}>">
                 <{/if}>
                 <p style="text-align: center;"><input type="submit" value="<{$smarty.const._MD_ORDER_SEND}>"
-                                                      class="btn btn-primary"/></p>
+                                                      class="btn btn-primary"></p>
             </form>
         </div>
         <{if $form.note}>

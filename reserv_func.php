@@ -43,7 +43,7 @@ function get_opt_values($optfield, &$errs, $hidden = false, $view = true)
                 foreach ($_POST[$iname] as $vv) {
                     $v .= ($v == '' ? '' : ',') . $myts->stripSlashesGPC($vv);
                     if ($hidden) {
-                        $input .= "<input type='hidden' name='{$iname}[]' id='{$iname}[]' value='" . $myts->htmlSpecialChars($vv) . "'/>";
+                        $input .= "<input type='hidden' name='{$iname}[]' id='{$iname}[]' value='" . $myts->htmlSpecialChars($vv) . "'>";
                     }
                 }
             }
@@ -53,7 +53,7 @@ function get_opt_values($optfield, &$errs, $hidden = false, $view = true)
                 $v = preg_replace('/\n.*$/s', '', $v);
             }
             if ($hidden) {
-                $input .= "<input type='hidden' name='opt$field' value='" . $myts->htmlSpecialChars($v) . "'/>";
+                $input .= "<input type='hidden' name='opt$field' value='" . $myts->htmlSpecialChars($v) . "'>";
             }
             // remove control char except textarea
             if ($type != 'textarea') {

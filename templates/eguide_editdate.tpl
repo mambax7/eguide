@@ -2,7 +2,7 @@
     <{foreach from=$errors item=msg}>
         <div class="error"><{$msg}></div>
     <{/foreach}>
-    <p/>
+    <p>
 <{/if}>
 <table width="100%">
     <tr>
@@ -25,7 +25,7 @@
     <div style="float:right;">
         <a href="index.php?cat=<{$event.catid}>">
             <{if $event.catimg}>
-                <img src="<{$event.catimg}>" alt="<{$event.catname}>" class="catbox img-thumbnail" width="150"/>
+                <img src="<{$event.catimg}>" alt="<{$event.catname}>" class="catbox img-thumbnail" width="150">
             <{else}>
                 <span class="catbox"><{$event.catname}></span>
             <{/if}>
@@ -47,17 +47,17 @@
         <{foreach from=$extents item=ext}>
             <tr class="<{cycle values="even, odd"}>">
                 <td align="center"><{if $ext.reserved}>-<{else}><input type="checkbox" name="dels[<{$ext.exid}>]"
-                                                                       value="<{$ext.exid}>"/><{/if}></td>
+                                                                       value="<{$ext.exid}>"><{/if}></td>
                 <td><a href="event.php?eid=<{$event.eid}>&amp;sub=<{$ext.exid}>"><{$ext.date}></a></td>
                 <td align="right"><{$ext.reserved}></td>
                 <td>(<{if $ext.expersons}><{$ext.expersons}><{else}>-<{/if}>)</td>
                 <td align="center">
                     <{if $ext.edit}>
                         <input type="text" name="mods[<{$ext.exid}>]" value="<{$ext.edit}>" size="18"
-                               class="form-control"/>
+                               class="form-control">
                         &nbsp;
                         <input type="text" name="exps[<{$ext.exid}>]" size="2" value="<{$ext.expersons}>"
-                               class="form-control"/>
+                               class="form-control">
                     <{/if}>
                 </td>
             </tr>
@@ -67,5 +67,5 @@
     <h4><{$smarty.const._MD_ADD_EXTENT}></h4>
     <div><textarea name="adds" class="form-control"><{$adds}></textarea></div>
     <div class="evinfo"><{$smarty.const._MD_ADD_EXTENT_DESC}></div>
-    <p><input type="submit" value="<{$smarty.const._MD_UPDATE}>" class="btn btn-primary"/></p>
+    <p><input type="submit" value="<{$smarty.const._MD_UPDATE}>" class="btn btn-primary"></p>
 </form>

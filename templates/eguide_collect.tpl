@@ -26,7 +26,7 @@
             <div style="float:right;">
                 <a href="index.php?cat=<{$ev.catid}>">
                     <{if $ev.catimg}>
-                        <img src="<{$ev.catimg}>" alt="<{$ev.catname}>" class="catbox img-thumbnail" width="150"/>
+                        <img src="<{$ev.catimg}>" alt="<{$ev.catname}>" class="catbox img-thumbnail" width="150">
                     <{else}>
                         <span class="catbox"><{$ev.catname}></span>
                     <{/if}>
@@ -55,7 +55,7 @@
                                     <input type="text" size="2"
                                            name="persons[<{$ev.eid}><{if $ev.exid}>-<{$ev.exid}><{/if}>]"
                                            value="<{if $ev.exid}><{$ev.expersons}><{else}><{$ev.persons}><{/if}>"
-                                           class="form-control"/><br>
+                                           class="form-control"><br>
                                     <a href="entry.php?eid=<{$ev.eid}><{if $ev.exid}>&sub=<{$ev.exid}><{/if}>"
                                        title="<{$ev.date}> <{$ev.title}>"><{$smarty.const._REGISTER}></a>
                                     <a href="receipt.php?eid=<{$ev.eid}><{if $ev.exid}>&sub=<{$ev.exid}><{/if}>"
